@@ -17,13 +17,13 @@ print (str(popt_exponential[0])+" * exp("+str(popt_exponential[1])+" * x) + "+st
 #save the predictions of the above fitted function and its derivative for A = 0 to 100 in a dataframe 
 dfx=pd.DataFrame(columns=['A', 'B'])
 for x in range(1,100):
-    #print(x,exponential(x,popt_exponential[0],popt_exponential[1],popt_exponential[2]))
+    print(x,exponential(x,popt_exponential[0],popt_exponential[1],popt_exponential[2]))
     dfx.loc[x,['A']] = x
     dfx.loc[x,['B']] = exponential(x,popt_exponential[0],popt_exponential[1],popt_exponential[2])
-#print("derivatives")
+print("derivatives")
 dfy=pd.DataFrame(columns=['A', 'B'])
 for x in range(1,100):
-    #print(x,exponential(x,popt_exponential[0]*popt_exponential[1],popt_exponential[1],0))
+    print(x,exponential(x,popt_exponential[0]*popt_exponential[1],popt_exponential[1],0))
     dfy.loc[x,['A']] = x
     dfy.loc[x,['B']] = exponential(x,popt_exponential[0]*popt_exponential[1],popt_exponential[1],0)
 
